@@ -1,0 +1,11 @@
+{
+  "name": "jsextensions",
+  "version": "1.0.0",
+  "description": "has extension to js data types",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "faraj shuaib",
+  "license": "ISC"
+}
