@@ -1,3 +1,10 @@
+declare global {
+  interface Boolean {
+    isTrue(): boolean;
+    isFalse(): boolean;
+    toggle(): boolean;
+  }
+}
 Boolean.prototype.isTrue = function () {
   return this.valueOf() === true;
 };
@@ -9,3 +16,5 @@ Boolean.prototype.isFalse = function () {
 Boolean.prototype.toggle = function () {
   return !this.valueOf();
 };
+
+export {};

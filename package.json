@@ -1,6 +1,6 @@
 {
-  "name": "jsextensions",
-  "version": "1.0.0",
+  "name": "use-exten",
+  "version": "1.0.1",
   "description": "has extension to js data types",
   "main": "index.js",
   "scripts": {

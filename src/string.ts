@@ -1,3 +1,12 @@
+declare global {
+  interface String {
+    isEmpty(): boolean;
+    isEmptyOrNull(): boolean;
+    isArabicLetters(): boolean;
+    isEnglishLetters(): boolean;
+  }
+}
+
 /**
  * @description Makes Sure that the string is empty.
  * @memberof String
@@ -37,3 +46,5 @@ String.prototype.isArabicLetters = function () {
 String.prototype.isEnglishLetters = function () {
   return /^[A-Za-z]+$/.test(this);
 };
+
+export {};

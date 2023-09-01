@@ -1,3 +1,10 @@
+declare global {
+  interface Array<T> {
+    isEqual(arr: T[]): boolean;
+    isEmpty(): boolean;
+    isEmptyOrNull(): boolean;
+  }
+}
 Array.prototype.isEqual = function (arr: any[]) {
   if (this.length !== arr.length) return false;
   for (let i = 0; i < this.length; i++) {
@@ -13,3 +20,5 @@ Array.prototype.isEmpty = function () {
 Array.prototype.isEmptyOrNull = function () {
   return this == null || this.length === 0;
 };
+
+export {};
