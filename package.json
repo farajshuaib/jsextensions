@@ -2,9 +2,10 @@
   "name": "use-exten",
   "version": "1.0.1",
   "description": "has extension to js data types",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "author": "faraj shuaib",
   "license": "ISC"
