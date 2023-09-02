@@ -2,6 +2,7 @@ declare global {
   interface Array<T> {
     isEqual(arr: T[]): boolean;
     isEmpty(): boolean;
+    isNotEmpty(): boolean;
     isEmptyOrNull(): boolean;
     groupBy(key: string): any;
     removeDuplicates(): any;
@@ -19,7 +20,9 @@ Array.prototype.isEqual = function (arr: any[]) {
 Array.prototype.isEmpty = function () {
   return this.length === 0;
 };
-
+Array.prototype.isNotEmpty = function () {
+  return this.length > 0;
+};
 Array.prototype.isEmptyOrNull = function () {
   return this == null || this.length === 0;
 };
