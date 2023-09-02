@@ -59,6 +59,13 @@ numbers, objects, strings,functions, etc. use exten’s modular methods are grea
 - Creating composite functions
 
 
-## Exampe?
+## Examples
 
+### strings extensions
 ![Alt text](image.png)
+
+### arrays extensions
+![img.png](img.png)
+
+### numbers extensions
+![img_1.png](img_1.png)
