@@ -3,6 +3,9 @@ declare global {
         isEqual(arr: T[]): boolean;
         isEmpty(): boolean;
         isEmptyOrNull(): boolean;
+        groupBy(key: string): any;
+        removeDuplicates(): any;
+        sortBy(key: string): any;
     }
 }
 export {};

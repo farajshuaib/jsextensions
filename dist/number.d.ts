@@ -7,6 +7,10 @@ declare global {
         isZero(): boolean;
         isBetween(min: number, max: number): boolean;
         isDecimal(): boolean;
+        add(num: number): number;
+        multiplay(num: number): number;
+        divide(num: number): number;
+        subtract(num: number): number;
     }
 }
 export {};

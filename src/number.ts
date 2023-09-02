@@ -7,6 +7,10 @@ declare global {
     isZero(): boolean;
     isBetween(min: number, max: number): boolean;
     isDecimal(): boolean;
+    add(num: number): number;
+    multiplay(num: number): number;
+    divide(num: number): number;
+    subtract(num: number): number;
   }
 }
 
@@ -37,5 +41,21 @@ Number.prototype.isBetween = function (min: number, max: number) {
 Number.prototype.isDecimal = function () {
   return this.valueOf() % 1 !== 0;
 };
+
+Number.prototype.add = function (num: number) {
+  return this.valueOf() + num;
+}
+
+Number.prototype.multiplay = function (num: number) {
+  return this.valueOf() * num;
+}
+
+Number.prototype.divide = function (num: number) {
+  return this.valueOf() / num;
+}
+
+Number.prototype.subtract = function (num: number) {
+  return this.valueOf() - num;
+}
 
 export {};

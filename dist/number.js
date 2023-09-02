@@ -21,3 +21,15 @@ Number.prototype.isBetween = function (min, max) {
 Number.prototype.isDecimal = function () {
     return this.valueOf() % 1 !== 0;
 };
+Number.prototype.add = function (num) {
+    return this.valueOf() + num;
+};
+Number.prototype.multiplay = function (num) {
+    return this.valueOf() * num;
+};
+Number.prototype.divide = function (num) {
+    return this.valueOf() / num;
+};
+Number.prototype.subtract = function (num) {
+    return this.valueOf() - num;
+};
