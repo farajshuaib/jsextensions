@@ -1,6 +1,6 @@
 {
   "name": "use-exten",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Use Extension makes js easier by taking the hassle out of working with array, numbers, objects, string, etc, by bringing powerful methods on this data types prototype ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
