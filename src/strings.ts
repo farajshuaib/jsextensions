@@ -59,21 +59,26 @@ String.prototype.isEnglishLetters = function () {
 };
 
 String.prototype.toCamelCase = function () {
+  // should remove space and hyphen and underscore and capitalize the first letter of each word
   return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
     return index === 0 ? word.toLowerCase() : word.toUpperCase();
-  }).replace(/\s+/g, "");
+    // spaces and hyphens
+  })
+    .replace(/\s+/g, "")
+    .replace("-", "")
+    .replace("_", "");
 };
 
 String.prototype.toPascalCase = function () {
   return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (word) => {
     return word.toUpperCase();
-  }).replace(/\s+/g, "");
+  }).replace(/\s+/g, "").replace("-", "").replace("_", "");
 };
 
 String.prototype.toSnakeCase = function () {
   return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
     return index === 0 ? word.toLowerCase() : "_" + word.toLowerCase();
-  }).replace(/\s+/g, "");
+  }).replace(/\s+/g, "").replace("-", "_")
 };
 
 String.prototype.toKebabCase = function () {
@@ -138,5 +143,7 @@ String.prototype.hexToRGB = function (h: string) {
 
   return "rgb(" + +r + "," + +g + "," + +b + ")";
 };
+
+
 
 export {};
