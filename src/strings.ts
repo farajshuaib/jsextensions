@@ -9,7 +9,6 @@ declare global {
     toSnakeCase(): string;
     toKebabCase(): string;
     toTitleCase(): string;
-    toSentenceCase(): string;
     toLowerCaseFirstLetter(): string;
     toUpperCaseFirstLetter(): string;
     utf8_to_b64(str: string): string;
@@ -72,31 +71,30 @@ String.prototype.toCamelCase = function () {
 String.prototype.toPascalCase = function () {
   return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (word) => {
     return word.toUpperCase();
-  }).replace(/\s+/g, "").replace("-", "").replace("_", "");
+  })
+    .replace(/\s+/g, "")
+    .replace("-", "")
+    .replace("_", "");
 };
 
 String.prototype.toSnakeCase = function () {
-  return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
-    return index === 0 ? word.toLowerCase() : "_" + word.toLowerCase();
-  }).replace(/\s+/g, "").replace("-", "_")
+  return this.replace("-", "_").replace(" ", "_").toLowerCase();
 };
 
 String.prototype.toKebabCase = function () {
-  return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
-    return index === 0 ? word.toLowerCase() : "-" + word.toLowerCase();
-  }).replace(/\s+/g, "");
+  return this.replace("_", "-").replace(" ", "-").toLowerCase();
 };
 
 String.prototype.toTitleCase = function () {
-  return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (word) => {
-    return word.toUpperCase();
-  }).replace(/\s+/g, " ");
-};
-
-String.prototype.toSentenceCase = function () {
-  return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
-    return index === 0 ? word.toUpperCase() : word.toLowerCase();
-  }).replace(/\s+/g, " ");
+  return this.replace("-", " ")
+    .replace("_", " ")
+    .replace(" ", " ")
+    .toLowerCase()
+    .split(" ")
+    .map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
 };
 
 String.prototype.toLowerCaseFirstLetter = function () {
@@ -143,7 +141,5 @@ String.prototype.hexToRGB = function (h: string) {
 
   return "rgb(" + +r + "," + +g + "," + +b + ")";
 };
-
-
 
 export {};

@@ -112,17 +112,6 @@ describe("Strings Extensions test cases", () => {
     expect(str.toTitleCase()).toBe("Hello World");
   });
 
-  // test toSentenceCase  method
-  it("should return Sentence case when given a string containing spaces", () => {
-    const str = "hello world";
-    expect(str.toSentenceCase()).toBe("Hello world");
-  });
-
-  it("should return Sentence case when given a string containing dashes", () => {
-    const str = "hello-world";
-    expect(str.toSentenceCase()).toBe("Hello world");
-  });
-
   // test toLowerCaseFirstLetter  method
   it("should return lower case first letter when given a string containing spaces", () => {
     const str = "Hello world";
